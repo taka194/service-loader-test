@@ -1,0 +1,4 @@
+rootProject.name = "service-loader-test"
+
+include ":main-project"
+include ":sub-project"

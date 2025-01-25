@@ -1,0 +1,22 @@
+plugins {
+  id "java"
+  id "java-library"
+}
+
+repositories {
+  mavenCentral()
+}
+
+subprojects { project ->
+
+  apply plugin: "java"
+  apply plugin: "java-library"
+  sourceCompatibility = JavaVersion.VERSION_21
+  targetCompatibility = JavaVersion.VERSION_21
+  compileJava.options.encoding = 'UTF-8'
+  compileTestJava.options.encoding = 'UTF-8'
+
+  repositories {
+    mavenCentral()
+  }
+}
