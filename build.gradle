@@ -19,4 +19,10 @@ subprojects { project ->
   repositories {
     mavenCentral()
   }
+
+  task makeServiceFile(type: Copy) {
+    dependsOn "compileJava"
+    from "$buildDir/classes/java/main/META-INF/services"
+    into "$projectDir/src/main/resources/META-INF/services"
+  }
 }
